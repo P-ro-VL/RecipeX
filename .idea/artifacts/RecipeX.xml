@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RecipeX">
+    <output-path>$PROJECT_DIR$/out/artifacts/RecipeX</output-path>
+    <root id="archive" name="RecipeX.jar" />
+  </artifact>
+</component>

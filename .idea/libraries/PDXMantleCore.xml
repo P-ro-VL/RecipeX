@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="PDXMantleCore">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../PDXMantleCore/build/PDXMantleCore.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="85ec813c-0314-4dd4-a174-c782ad882b7c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/RecipeX.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/PDXMantleCore.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Paper_1_16_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecipeX.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vn/provl/RecipeX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vn/provl/api/manager/PlayerDataManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vn/provl/api/manager/RecipeManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vn/provl/api/recipe/Recipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vn/provl/ui/MainUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vn/provl/ui/RecipeViewerUI.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../Plugin Source Library/Paper API/Paper-1.16.5.jar!/org/bukkit/configuration/file/FileConfiguration.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../Plugin Source Library/Paper API/Paper-1.16.5.jar!/org/bukkit/configuration/file/YamlConfiguration.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../Plugin Source Library/Paper API/Paper-1.16.5.jar!/org/bukkit/plugin/PluginDescriptionFile.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../Plugin Source Library/Paper API/Paper-1.16.5.jar!/org/bukkit/plugin/java/JavaPluginLoader.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../Plugin Source Library/Paper API/Paper-1.16.5.jar!/org/bukkit/plugin/java/PluginClassLoader.class" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="2OCNqyz8H9PLeS8MClrrRvncpY7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Minecraft/Plugin Development/PDXMantleCore/build/PDXMantleCore.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.23333333&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="85ec813c-0314-4dd4-a174-c782ad882b7c" name="Changes" comment="" />
+      <created>1681060799164</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681060799164</updated>
+    </task>
+    <servers />
+  </component>
+</project>
