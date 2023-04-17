@@ -1,6 +1,7 @@
 package vn.provl.ui;
 
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
@@ -15,7 +16,7 @@ public class RecipeViewerUI extends Menu {
     public static final int ARROW_SLOT = 23, RESULT_SLOT = 24;
 
     public RecipeViewerUI(MainUI mainUI, Recipe recipe) {
-        super(45, "Xem công thức");
+        super(54, "Xem công thức");
 
         int[] blackBorders = {0, 1, 2, 3, 4, 5, 6, 7, 8, 53, 52, 51, 50, 49, 48, 47, 46, 45};
         for (int slot : blackBorders)
@@ -56,7 +57,9 @@ public class RecipeViewerUI extends Menu {
             @Override
             public void onClick(InventoryClickEvent e) {
                 e.setCancelled(true);
-                Menu.open((Player) e.getWhoClicked(), mainUI);
+                Player player = (Player) e.getWhoClicked();
+                Menu.open(player, mainUI);
+                player.playSound(player.getEyeLocation(), Sound.ITEM_BOOK_PAGE_TURN, 1, 1);
             }
         });
     }

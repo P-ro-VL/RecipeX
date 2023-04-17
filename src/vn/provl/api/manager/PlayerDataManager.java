@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class PlayerDataManager {
 
-    private static final Map<String, PlayerDataManager> unlockedRecipesData = Maps.newHashMap();
+    protected static final Map<String, PlayerDataManager> unlockedRecipesData = Maps.newHashMap();
 
     public static PlayerDataManager getData(Player player){
         PlayerDataManager dataManager = unlockedRecipesData.get(player.getName());
@@ -27,6 +27,10 @@ public class PlayerDataManager {
         return unlockedRecipes;
     }
 
+    public void setUnlockedRecipes(List<String> unlockedRecipes) {
+        this.unlockedRecipes = unlockedRecipes;
+    }
+
     public boolean hasUnlocked(Recipe recipe){
         return getUnlockedRecipes().contains(recipe.getId());
     }
@@ -36,4 +40,5 @@ public class PlayerDataManager {
         unlockedRecipes.add(recipe.getId());
         return true;
     }
+
 }

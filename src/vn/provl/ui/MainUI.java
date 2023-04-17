@@ -1,12 +1,14 @@
 package vn.provl.ui;
 
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import pdx.mantlecore.item.ItemBuilder;
 import pdx.mantlecore.item.ItemNameUtil;
 import pdx.mantlecore.menu.Menu;
 import pdx.mantlecore.menu.elements.MenuItem;
+
 import vn.provl.RecipeX;
 import vn.provl.api.manager.PlayerDataManager;
 import vn.provl.api.recipe.Recipe;
@@ -27,14 +29,24 @@ public class MainUI extends Menu {
         this.player = player;
         this.maxPage = registeredRecipes.size() / 36;
 
+        MainUI thisUI = this;
+
         PlayerDataManager playerData = PlayerDataManager.getData(player);
 
         setupFrame();
+        setItem(49, new MenuItem(new ItemBuilder(Material.SUNFLOWER, "§a§lThông tin",
+                "§7- Tổng số công thức: §c" + RecipeX.getInstance().getRecipeManager().getRegisteredRecipes().size(),
+                    "§7- Đã mở khóa: §a" + playerData.getUnlockedRecipes().size())){
+            @Override
+            public void onClick(InventoryClickEvent e) {
+                e.setCancelled(true);
+            }
+        });
 
         for (int i = page * 36; i < (page + 1) * 36; i++) {
             int slot = i - (36 * page);
             if (i >= registeredRecipes.size()) {
-                setItem(slot, new MenuItem(new ItemBuilder(Material.LIGHT_GRAY_STAINED_GLASS_PANE, " ", "")){
+                setItem(slot, new MenuItem(new ItemBuilder(Material.LIGHT_GRAY_STAINED_GLASS_PANE, " ", "")) {
                     @Override
                     public void onClick(InventoryClickEvent e) {
                         e.setCancelled(true);
@@ -44,19 +56,24 @@ public class MainUI extends Menu {
             }
 
             Recipe recipe = registeredRecipes.get(i);
-            if(playerData.hasUnlocked(recipe)){
+            if (!playerData.hasUnlocked(recipe)) {
                 setItem(slot, new MenuItem(new ItemBuilder(Material.BARRIER, ItemNameUtil.formatItemName(recipe.getResult()),
-                        "§c§lChưa mở khóa", "§7Bạn chưa mở khóa công thức này.")){
+                        "§c§lChưa mở khóa", "§7Bạn chưa mở khóa công thức này.")) {
                     @Override
                     public void onClick(InventoryClickEvent e) {
                         e.setCancelled(true);
+
+                        player.playSound(player.getEyeLocation(), Sound.ENTITY_BLAZE_DEATH, 1, 0);
                     }
                 });
-            }else{
-                setItem(slot, new MenuItem(new ItemBuilder(recipe.getResult()).addLoreLine("", "§7Nhấn để xem công thức")){
+            } else {
+                setItem(slot, new MenuItem(new ItemBuilder(recipe.getResult()).addLoreLine("", "§7Nhấn để xem công thức")) {
                     @Override
                     public void onClick(InventoryClickEvent e) {
                         e.setCancelled(true);
+                        Menu.open(player, new RecipeViewerUI(thisUI, recipe));
+
+                        player.playSound(player.getEyeLocation(), Sound.ITEM_BOOK_PAGE_TURN, 1, 1);
                     }
                 });
             }
@@ -85,7 +102,7 @@ public class MainUI extends Menu {
                 }
             });
 
-        if (page < 36) {
+        if (page < maxPage) {
             setItem(nextPageSlot, new MenuItem(new ItemBuilder(Material.ARROW, "§6Trang sau >", "§7Nhấn để sang trang kế tiếp")) {
                 @Override
                 public void onClick(InventoryClickEvent e) {

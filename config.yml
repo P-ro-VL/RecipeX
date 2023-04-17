@@ -1,0 +1,6 @@
+unlock-item:
+  type: paper
+  glow: true
+  name: '&aGiấy mở khóa'
+  lore:
+    - '&7Phải chuột để mở khóa công thức.'

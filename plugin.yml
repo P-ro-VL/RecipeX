@@ -1,0 +1,9 @@
+name: RecipeX
+version: RELEASE-1.0
+author: phongphong28
+main: vn.provl.RecipeX
+api-version: 1.13
+depend: [PDXMantleCore]
+commands:
+  congthuc:
+    usage: "Dùng để mở GUI xem các công thức hiện có."
